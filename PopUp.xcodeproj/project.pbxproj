@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10A1189C1A742D9C4D7D9F09 /* PopUpCore in Frameworks */ = {isa = PBXBuildFile; productRef = A1D706763A1D9A87F75B10F0 /* PopUpCore */; };
+		1FE1919E7ED840CE59BD0A91 /* PopUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7FA97D62F8ABD7155EECB9 /* PopUpApp.swift */; };
+		4E481E284C5F6A737D217B4B /* SceneContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81A99477F4F554DC16FD4 /* SceneContainer.swift */; };
+		6AFAFD6B3895260B8740F46D /* AngleReadout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABB051EBA82B72D0AA53D1 /* AngleReadout.swift */; };
+		7074654DD5BC83AE3C7CBBF9 /* BedroomScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3411597C84099195A71E4FAC /* BedroomScene.swift */; };
+		A99487F244FB53BB60A5C9C5 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A340B2FEAF836ABF84E23 /* GameView.swift */; };
+		B61BCAFEA5E2B2E5EF6D92C4 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BC517CDAB5955FC3CF8BB3 /* GameController.swift */; };
+		EF926B50AF0BFA10F5C58599 /* HingeAngleSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382EAF1DC8CF8CC302BF1A39 /* HingeAngleSource.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32BC517CDAB5955FC3CF8BB3 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		330F1B97F0DCFB8B41109326 /* PopUp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PopUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3411597C84099195A71E4FAC /* BedroomScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedroomScene.swift; sourceTree = "<group>"; };
+		382EAF1DC8CF8CC302BF1A39 /* HingeAngleSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HingeAngleSource.swift; sourceTree = "<group>"; };
+		3EABB051EBA82B72D0AA53D1 /* AngleReadout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleReadout.swift; sourceTree = "<group>"; };
+		505B06883AE219A886891E2F /* PopUpCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PopUpCore; path = PopUpCore; sourceTree = SOURCE_ROOT; };
+		6C7FA97D62F8ABD7155EECB9 /* PopUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpApp.swift; sourceTree = "<group>"; };
+		B98A340B2FEAF836ABF84E23 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B9E81A99477F4F554DC16FD4 /* SceneContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneContainer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16D867EF882EF20B23C11850 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A1189C1A742D9C4D7D9F09 /* PopUpCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		572E5C8B59E6AA2DC8C5C461 = {
+			isa = PBXGroup;
+			children = (
+				9C4686082BB10151DD43BF3D /* Packages */,
+				5DC4784B949991BF6FE2D44A /* PopUp */,
+				C3F2416C98188B910E0C23A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DC4784B949991BF6FE2D44A /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				3EABB051EBA82B72D0AA53D1 /* AngleReadout.swift */,
+				3411597C84099195A71E4FAC /* BedroomScene.swift */,
+				32BC517CDAB5955FC3CF8BB3 /* GameController.swift */,
+				B98A340B2FEAF836ABF84E23 /* GameView.swift */,
+				382EAF1DC8CF8CC302BF1A39 /* HingeAngleSource.swift */,
+				6C7FA97D62F8ABD7155EECB9 /* PopUpApp.swift */,
+				B9E81A99477F4F554DC16FD4 /* SceneContainer.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		9C4686082BB10151DD43BF3D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				505B06883AE219A886891E2F /* PopUpCore */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		C3F2416C98188B910E0C23A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				330F1B97F0DCFB8B41109326 /* PopUp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AB2CD30B409723B493851BC /* PopUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44F0AB66C174E2B4F71FCE52 /* Build configuration list for PBXNativeTarget "PopUp" */;
+			buildPhases = (
+				F28CFF78E0AF3DE8A1BB71A3 /* Sources */,
+				16D867EF882EF20B23C11850 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopUp;
+			packageProductDependencies = (
+				A1D706763A1D9A87F75B10F0 /* PopUpCore */,
+			);
+			productName = PopUp;
+			productReference = 330F1B97F0DCFB8B41109326 /* PopUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		828BF69A874B2FC4E814460F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2AB2CD30B409723B493851BC = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A4748C2D79C30A10E819F993 /* Build configuration list for PBXProject "PopUp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 572E5C8B59E6AA2DC8C5C461;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				32341AD1BCE5F9DA7F7A1286 /* XCLocalSwiftPackageReference "PopUpCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AB2CD30B409723B493851BC /* PopUp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F28CFF78E0AF3DE8A1BB71A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AFAFD6B3895260B8740F46D /* AngleReadout.swift in Sources */,
+				7074654DD5BC83AE3C7CBBF9 /* BedroomScene.swift in Sources */,
+				B61BCAFEA5E2B2E5EF6D92C4 /* GameController.swift in Sources */,
+				A99487F244FB53BB60A5C9C5 /* GameView.swift in Sources */,
+				EF926B50AF0BFA10F5C58599 /* HingeAngleSource.swift in Sources */,
+				1FE1919E7ED840CE59BD0A91 /* PopUpApp.swift in Sources */,
+				4E481E284C5F6A737D217B4B /* SceneContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A7EB866AD5A1487A61483C11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "POP-UP";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.popup;
+				PRODUCT_NAME = PopUp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D99B77C54630DFDAD7E23AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "POP-UP";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.popup;
+				PRODUCT_NAME = PopUp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F8862B5E23E7BCBA6B0D583F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FADDF8727FC2AB2622A18D66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44F0AB66C174E2B4F71FCE52 /* Build configuration list for PBXNativeTarget "PopUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D99B77C54630DFDAD7E23AD2 /* Debug */,
+				A7EB866AD5A1487A61483C11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A4748C2D79C30A10E819F993 /* Build configuration list for PBXProject "PopUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FADDF8727FC2AB2622A18D66 /* Debug */,
+				F8862B5E23E7BCBA6B0D583F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		32341AD1BCE5F9DA7F7A1286 /* XCLocalSwiftPackageReference "PopUpCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = PopUpCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1D706763A1D9A87F75B10F0 /* PopUpCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PopUpCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 828BF69A874B2FC4E814460F /* Project object */;
+}
