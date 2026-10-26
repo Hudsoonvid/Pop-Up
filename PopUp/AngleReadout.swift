@@ -1,32 +1,53 @@
-import SwiftUI
 import PopUpCore
+import SwiftUI
 
-/// Step 1 of the plan: the live hinge angle, how often it updates, and a graph
-/// of the last few seconds, so you can see how smooth the reading really is.
+/// The fold angle, small in a corner. Tap it for the full readout: smoothed
+/// angle, camera tilt, hinge status, updates per second and a graph of the
+/// last few seconds, to see how smooth the real hinge reading is.
 struct AngleReadout: View {
     let game: GameController
+    @State private var expanded = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Text(game.hinge.hasHinge ? "HINGE ANGLE" : "SLIDER ANGLE (NO HINGE)")
-                .font(.caption2.weight(.semibold))
-                .foregroundStyle(.secondary)
-            Text("\(game.hinge.degrees, specifier: "%.1f")°")
-                .font(.system(size: 40, weight: .bold, design: .rounded))
-                .monospacedDigit()
-            Group {
-                Text("smoothed \(game.smoothedDegrees, specifier: "%.1f")° · camera tilt \(game.cameraTilt, specifier: "%.1f")°")
-                if game.hinge.hasHinge {
-                    Text("\(game.hinge.statusName) · \(game.updatesPerSecond) updates/s")
+        Button {
+            expanded.toggle()
+        } label: {
+            VStack(alignment: .leading, spacing: 3) {
+                HStack(spacing: 6) {
+                    Text("\(game.hinge.degrees, specifier: "%.1f")°")
+                        .font(.system(.title3, design: .rounded).weight(.bold))
+                        .monospacedDigit()
+                    Text(game.hinge.isUsingFakeFold ? "fake fold" : "hinge")
+                        .font(.caption2.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                    Image(systemName: expanded ? "chevron.up" : "chevron.down")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+                if expanded {
+                    details
                 }
             }
-            .font(.caption.monospacedDigit())
-            AngleHistoryChart(samples: game.history, target: game.layout.alignHinge)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14))
+        }
+        .buttonStyle(.plain)
+    }
+
+    private var details: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text("smoothed \(game.smoothedDegrees, specifier: "%.1f")° · camera tilt \(game.cameraTilt, specifier: "%.1f")°")
+            if game.hinge.hasHinge {
+                Text("hinge \(game.hinge.hingeDegrees, specifier: "%.1f")° \(game.hinge.statusName) · \(game.updatesPerSecond) updates/s")
+            } else {
+                Text("no hinge reported")
+            }
+            Text("click at \(game.blueprint.lock.target, specifier: "%.0f")°")
+            AngleHistoryChart(samples: game.history, target: game.blueprint.lock.target)
                 .frame(width: 240, height: 60)
         }
-        .padding(12)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14))
-        .allowsHitTesting(false)
+        .font(.caption.monospacedDigit())
     }
 }
 

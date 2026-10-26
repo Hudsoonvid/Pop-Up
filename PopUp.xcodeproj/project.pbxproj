@@ -7,26 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01350157E106A98C0FF53BEF /* particle_leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B061AD6B78309C9E8EDE7A3 /* particle_leaf.png */; };
 		10A1189C1A742D9C4D7D9F09 /* PopUpCore in Frameworks */ = {isa = PBXBuildFile; productRef = A1D706763A1D9A87F75B10F0 /* PopUpCore */; };
+		1C91CEEA42B80E78A18EA63C /* linen_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1455C525BCDB3ABA93A08D7 /* linen_albedo.jpg */; };
 		1FE1919E7ED840CE59BD0A91 /* PopUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7FA97D62F8ABD7155EECB9 /* PopUpApp.swift */; };
+		2DAE93E41FF12C6C62DE1C45 /* Particles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB0ACF0FB1691208A55E2A2 /* Particles.swift */; };
+		34A80D75AD04F68FFA4D19AB /* mossywood_roughness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A779D4C2F057BD6A252869A /* mossywood_roughness.jpg */; };
 		4E481E284C5F6A737D217B4B /* SceneContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81A99477F4F554DC16FD4 /* SceneContainer.swift */; };
+		5E33C7E7CB25367B1B23DB45 /* wood_roughness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E18B2B1487F34A5235E144B7 /* wood_roughness.jpg */; };
+		69302AFC75931EC55108915C /* quilt_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 713387624BE23303E73595BE /* quilt_albedo.jpg */; };
+		6956AF38C23271C05844A2F1 /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82188F134E903E075E751761 /* sky.jpg */; };
 		6AFAFD6B3895260B8740F46D /* AngleReadout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABB051EBA82B72D0AA53D1 /* AngleReadout.swift */; };
-		7074654DD5BC83AE3C7CBBF9 /* BedroomScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3411597C84099195A71E4FAC /* BedroomScene.swift */; };
+		6BEDBB08D00CADBAD213384C /* bark_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C8C76FE964620D49B56ACB68 /* bark_albedo.jpg */; };
+		74017D6DE61B279082507F2C /* moss_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C8BAE20CE2AA6CFC2A6AAD6 /* moss_albedo.jpg */; };
+		8EFB45063F0CEDF684D7B889 /* moss_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = C32D3209D13C57540631880E /* moss_normal.png */; };
+		90219DD23D0FB4BED4F05D02 /* forest_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16F0082F93323EFCA1F2B347 /* forest_albedo.jpg */; };
+		A36DDFB9A912FBB07C71103B /* leaves_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 993092444E5F87FB4266D959 /* leaves_albedo.jpg */; };
 		A99487F244FB53BB60A5C9C5 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A340B2FEAF836ABF84E23 /* GameView.swift */; };
+		AA58AB8595045C11CDFB2B89 /* rug_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27CD8198E4D6661CFA9CB96F /* rug_albedo.jpg */; };
+		B0C1B99D6B5CB2868EA07D5B /* mossywood_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF5C8154319DAB100CF8983 /* mossywood_normal.png */; };
+		B55B5DE704EA44BCEB037C91 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481AF95362AB5B72EAE1F244 /* LevelScene.swift */; };
 		B61BCAFEA5E2B2E5EF6D92C4 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BC517CDAB5955FC3CF8BB3 /* GameController.swift */; };
+		B94BC708C5409E73DDFD2E83 /* wood_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EB44C0BED43921C81050174B /* wood_normal.png */; };
+		B9502B59CA8FE307C19F4510 /* plush_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57E6500250635E486A789A3C /* plush_albedo.jpg */; };
+		BA1383C75CC83D3DD7F520BA /* wood_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 953EDCE29085924A3F1F74C2 /* wood_albedo.jpg */; };
+		BDE680348AF3AACA23176702 /* Traveller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FE8E52FA9026E194272F8 /* Traveller.swift */; };
+		BEE3494C28D18D162AF09BDB /* mossywood_albedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 204E1F1A98834A6DD8E47C08 /* mossywood_albedo.jpg */; };
+		D20CFB0D46AF3646ED416D5F /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371EB38CE1414903B60998D /* Materials.swift */; };
+		E59AD0ED38AF7C557C9293F2 /* particle_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE6A2762CFD012F3304FAE9 /* particle_dot.png */; };
 		EF926B50AF0BFA10F5C58599 /* HingeAngleSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382EAF1DC8CF8CC302BF1A39 /* HingeAngleSource.swift */; };
+		F988F8853A8A89807E65487B /* bark_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 265AFC66B8D85F52FD51D8E3 /* bark_normal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16F0082F93323EFCA1F2B347 /* forest_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = forest_albedo.jpg; sourceTree = "<group>"; };
+		204E1F1A98834A6DD8E47C08 /* mossywood_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mossywood_albedo.jpg; sourceTree = "<group>"; };
+		265AFC66B8D85F52FD51D8E3 /* bark_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bark_normal.png; sourceTree = "<group>"; };
+		27CD8198E4D6661CFA9CB96F /* rug_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rug_albedo.jpg; sourceTree = "<group>"; };
+		2B061AD6B78309C9E8EDE7A3 /* particle_leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle_leaf.png; sourceTree = "<group>"; };
 		32BC517CDAB5955FC3CF8BB3 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		330F1B97F0DCFB8B41109326 /* PopUp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PopUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3411597C84099195A71E4FAC /* BedroomScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedroomScene.swift; sourceTree = "<group>"; };
 		382EAF1DC8CF8CC302BF1A39 /* HingeAngleSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HingeAngleSource.swift; sourceTree = "<group>"; };
 		3EABB051EBA82B72D0AA53D1 /* AngleReadout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleReadout.swift; sourceTree = "<group>"; };
+		4371EB38CE1414903B60998D /* Materials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materials.swift; sourceTree = "<group>"; };
+		481AF95362AB5B72EAE1F244 /* LevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		505B06883AE219A886891E2F /* PopUpCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PopUpCore; path = PopUpCore; sourceTree = SOURCE_ROOT; };
+		57E6500250635E486A789A3C /* plush_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plush_albedo.jpg; sourceTree = "<group>"; };
+		6AB0ACF0FB1691208A55E2A2 /* Particles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particles.swift; sourceTree = "<group>"; };
 		6C7FA97D62F8ABD7155EECB9 /* PopUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpApp.swift; sourceTree = "<group>"; };
+		6C8BAE20CE2AA6CFC2A6AAD6 /* moss_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moss_albedo.jpg; sourceTree = "<group>"; };
+		713387624BE23303E73595BE /* quilt_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quilt_albedo.jpg; sourceTree = "<group>"; };
+		7FF5C8154319DAB100CF8983 /* mossywood_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mossywood_normal.png; sourceTree = "<group>"; };
+		82188F134E903E075E751761 /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
+		824FE8E52FA9026E194272F8 /* Traveller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveller.swift; sourceTree = "<group>"; };
+		8A779D4C2F057BD6A252869A /* mossywood_roughness.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mossywood_roughness.jpg; sourceTree = "<group>"; };
+		953EDCE29085924A3F1F74C2 /* wood_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wood_albedo.jpg; sourceTree = "<group>"; };
+		993092444E5F87FB4266D959 /* leaves_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leaves_albedo.jpg; sourceTree = "<group>"; };
 		B98A340B2FEAF836ABF84E23 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		B9E81A99477F4F554DC16FD4 /* SceneContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneContainer.swift; sourceTree = "<group>"; };
+		C32D3209D13C57540631880E /* moss_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moss_normal.png; sourceTree = "<group>"; };
+		C8C76FE964620D49B56ACB68 /* bark_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bark_albedo.jpg; sourceTree = "<group>"; };
+		CCE6A2762CFD012F3304FAE9 /* particle_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle_dot.png; sourceTree = "<group>"; };
+		E1455C525BCDB3ABA93A08D7 /* linen_albedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = linen_albedo.jpg; sourceTree = "<group>"; };
+		E18B2B1487F34A5235E144B7 /* wood_roughness.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wood_roughness.jpg; sourceTree = "<group>"; };
+		EB44C0BED43921C81050174B /* wood_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_normal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +98,16 @@
 			isa = PBXGroup;
 			children = (
 				3EABB051EBA82B72D0AA53D1 /* AngleReadout.swift */,
-				3411597C84099195A71E4FAC /* BedroomScene.swift */,
 				32BC517CDAB5955FC3CF8BB3 /* GameController.swift */,
 				B98A340B2FEAF836ABF84E23 /* GameView.swift */,
 				382EAF1DC8CF8CC302BF1A39 /* HingeAngleSource.swift */,
+				481AF95362AB5B72EAE1F244 /* LevelScene.swift */,
+				4371EB38CE1414903B60998D /* Materials.swift */,
+				6AB0ACF0FB1691208A55E2A2 /* Particles.swift */,
 				6C7FA97D62F8ABD7155EECB9 /* PopUpApp.swift */,
 				B9E81A99477F4F554DC16FD4 /* SceneContainer.swift */,
+				824FE8E52FA9026E194272F8 /* Traveller.swift */,
+				D299898C151EB70A8BA5AA28 /* Textures */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -80,6 +128,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D299898C151EB70A8BA5AA28 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				C8C76FE964620D49B56ACB68 /* bark_albedo.jpg */,
+				265AFC66B8D85F52FD51D8E3 /* bark_normal.png */,
+				16F0082F93323EFCA1F2B347 /* forest_albedo.jpg */,
+				993092444E5F87FB4266D959 /* leaves_albedo.jpg */,
+				E1455C525BCDB3ABA93A08D7 /* linen_albedo.jpg */,
+				6C8BAE20CE2AA6CFC2A6AAD6 /* moss_albedo.jpg */,
+				C32D3209D13C57540631880E /* moss_normal.png */,
+				204E1F1A98834A6DD8E47C08 /* mossywood_albedo.jpg */,
+				7FF5C8154319DAB100CF8983 /* mossywood_normal.png */,
+				8A779D4C2F057BD6A252869A /* mossywood_roughness.jpg */,
+				CCE6A2762CFD012F3304FAE9 /* particle_dot.png */,
+				2B061AD6B78309C9E8EDE7A3 /* particle_leaf.png */,
+				57E6500250635E486A789A3C /* plush_albedo.jpg */,
+				713387624BE23303E73595BE /* quilt_albedo.jpg */,
+				27CD8198E4D6661CFA9CB96F /* rug_albedo.jpg */,
+				82188F134E903E075E751761 /* sky.jpg */,
+				953EDCE29085924A3F1F74C2 /* wood_albedo.jpg */,
+				EB44C0BED43921C81050174B /* wood_normal.png */,
+				E18B2B1487F34A5235E144B7 /* wood_roughness.jpg */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,6 +162,7 @@
 			buildConfigurationList = 44F0AB66C174E2B4F71FCE52 /* Build configuration list for PBXNativeTarget "PopUp" */;
 			buildPhases = (
 				F28CFF78E0AF3DE8A1BB71A3 /* Sources */,
+				25C69B407D7E5A2C2B26A7D0 /* Resources */,
 				16D867EF882EF20B23C11850 /* Frameworks */,
 			);
 			buildRules = (
@@ -138,18 +213,50 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		25C69B407D7E5A2C2B26A7D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BEDBB08D00CADBAD213384C /* bark_albedo.jpg in Resources */,
+				F988F8853A8A89807E65487B /* bark_normal.png in Resources */,
+				90219DD23D0FB4BED4F05D02 /* forest_albedo.jpg in Resources */,
+				A36DDFB9A912FBB07C71103B /* leaves_albedo.jpg in Resources */,
+				1C91CEEA42B80E78A18EA63C /* linen_albedo.jpg in Resources */,
+				74017D6DE61B279082507F2C /* moss_albedo.jpg in Resources */,
+				8EFB45063F0CEDF684D7B889 /* moss_normal.png in Resources */,
+				BEE3494C28D18D162AF09BDB /* mossywood_albedo.jpg in Resources */,
+				B0C1B99D6B5CB2868EA07D5B /* mossywood_normal.png in Resources */,
+				34A80D75AD04F68FFA4D19AB /* mossywood_roughness.jpg in Resources */,
+				E59AD0ED38AF7C557C9293F2 /* particle_dot.png in Resources */,
+				01350157E106A98C0FF53BEF /* particle_leaf.png in Resources */,
+				B9502B59CA8FE307C19F4510 /* plush_albedo.jpg in Resources */,
+				69302AFC75931EC55108915C /* quilt_albedo.jpg in Resources */,
+				AA58AB8595045C11CDFB2B89 /* rug_albedo.jpg in Resources */,
+				6956AF38C23271C05844A2F1 /* sky.jpg in Resources */,
+				BA1383C75CC83D3DD7F520BA /* wood_albedo.jpg in Resources */,
+				B94BC708C5409E73DDFD2E83 /* wood_normal.png in Resources */,
+				5E33C7E7CB25367B1B23DB45 /* wood_roughness.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F28CFF78E0AF3DE8A1BB71A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6AFAFD6B3895260B8740F46D /* AngleReadout.swift in Sources */,
-				7074654DD5BC83AE3C7CBBF9 /* BedroomScene.swift in Sources */,
 				B61BCAFEA5E2B2E5EF6D92C4 /* GameController.swift in Sources */,
 				A99487F244FB53BB60A5C9C5 /* GameView.swift in Sources */,
 				EF926B50AF0BFA10F5C58599 /* HingeAngleSource.swift in Sources */,
+				B55B5DE704EA44BCEB037C91 /* LevelScene.swift in Sources */,
+				D20CFB0D46AF3646ED416D5F /* Materials.swift in Sources */,
+				2DAE93E41FF12C6C62DE1C45 /* Particles.swift in Sources */,
 				1FE1919E7ED840CE59BD0A91 /* PopUpApp.swift in Sources */,
 				4E481E284C5F6A737D217B4B /* SceneContainer.swift in Sources */,
+				BDE680348AF3AACA23176702 /* Traveller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
