@@ -102,17 +102,17 @@ enum MaterialLibrary {
             m.diffuse.contents = UIColor(red: 0.85, green: 0.82, blue: 0.72, alpha: 1)
             m.roughness.contents = 0.6
         case .flame:
-            glow(m, red: 1.0, green: 0.55, blue: 0.18, strength: 6)
+            glow(m, red: 1.0, green: 0.55, blue: 0.18, strength: 2.5)
         case .lanternGlass:
-            glow(m, red: 1.0, green: 0.62, blue: 0.3, strength: 3)
+            glow(m, red: 1.0, green: 0.62, blue: 0.3, strength: 1.3)
         case .moonGlass:
-            glow(m, red: 0.55, green: 0.68, blue: 1.0, strength: 1.6)
+            glow(m, red: 0.55, green: 0.68, blue: 1.0, strength: 0.7)
         case .mushroomGlow:
-            glow(m, red: 0.3, green: 0.95, blue: 0.8, strength: 2.5)
+            glow(m, red: 0.3, green: 0.95, blue: 0.8, strength: 1.1)
         case .doorGlow:
-            glow(m, red: 1.0, green: 0.66, blue: 0.32, strength: 2.5)
+            glow(m, red: 1.0, green: 0.66, blue: 0.32, strength: 1.1)
         case .jarGlow:
-            glow(m, red: 0.75, green: 1.0, blue: 0.35, strength: 3)
+            glow(m, red: 0.75, green: 1.0, blue: 0.35, strength: 1.3)
         case .void:
             m.lightingModel = .constant
             m.diffuse.contents = UIColor.black
@@ -131,7 +131,7 @@ enum MaterialLibrary {
         }
     }
 
-    /// Lit from within, bright enough to bloom.
+    /// Lit from within; the brightest of these get a soft bloom.
     private static func glow(_ m: SCNMaterial, red: CGFloat, green: CGFloat, blue: CGFloat, strength: CGFloat) {
         let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
         m.diffuse.contents = color.withAlphaComponent(1).multiplied(by: 0.3)

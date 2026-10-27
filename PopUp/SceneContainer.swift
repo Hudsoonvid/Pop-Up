@@ -40,6 +40,9 @@ final class FittingSceneView: SCNView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        // If a resize arrives inside someone else's animation, snap to the new
+        // size rather than stretching the old frame across it.
+        layer.removeAllAnimations()
         fitRoom()
     }
 

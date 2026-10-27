@@ -3,9 +3,9 @@ import SwiftUI
 
 /// The game screen: the room, with a few storybook touches on top.
 ///
-/// Nothing here moves or resizes when the phone folds, so the only transition
-/// you see is the system's own. When the book shuts, the cover shows; when it
-/// opens, the room pops up out of the page.
+/// When the book shuts, the cover shows; when it opens, the room pops up out of
+/// the page. `StillHostingController` keeps all of this from animating when
+/// the phone changes pose.
 struct GameView: View {
     @State private var game = GameController()
 
@@ -24,9 +24,6 @@ struct GameView: View {
                     HStack(alignment: .top) {
                         AngleReadout(game: game)
                         Spacer()
-                        if game.hinge.hasHinge {
-                            InputToggle(hinge: game.hinge)
-                        }
                     }
                     if game.showsTitle {
                         TitleCard(chapter: game.levelIndex + 1, title: game.blueprint.title)
@@ -36,9 +33,6 @@ struct GameView: View {
                 Spacer()
                 if !game.isClosed, !hint.isEmpty {
                     HintBar(text: hint)
-                }
-                if game.hinge.isUsingFakeFold {
-                    FakeFoldSlider(hinge: game.hinge)
                 }
             }
             .padding()
@@ -129,57 +123,6 @@ private struct BookCover: View {
         }
         .ignoresSafeArea()
         .allowsHitTesting(false)
-    }
-}
-
-/// Switches between the real hinge and the fake fold on a real iPhone Duo.
-private struct InputToggle: View {
-    let hinge: HingeAngleSource
-
-    var body: some View {
-        Button {
-            hinge.toggleFakeFold()
-        } label: {
-            Label(hinge.prefersFakeFold ? "Fake fold" : "Hinge",
-                  systemImage: hinge.prefersFakeFold ? "slider.horizontal.3" : "book")
-                .font(.caption.weight(.semibold))
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(.ultraThinMaterial, in: Capsule())
-        }
-        .buttonStyle(.plain)
-    }
-}
-
-/// Stands in for the hinge: the simulator only offers three fixed angles.
-private struct FakeFoldSlider: View {
-    @Bindable var hinge: HingeAngleSource
-
-    var body: some View {
-        VStack(spacing: 4) {
-            HStack {
-                Text("Fake fold")
-                    .font(.caption.weight(.semibold))
-                Spacer()
-                Text("\(hinge.fakeFoldDegrees, specifier: "%.0f")°")
-                    .font(.caption.monospacedDigit())
-            }
-            Slider(value: $hinge.fakeFoldDegrees, in: 0...180)
-            HStack {
-                Text("shut")
-                Spacer()
-                Text("side")
-                Spacer()
-                Text("tilted")
-                Spacer()
-                Text("flat")
-            }
-            .font(.caption2)
-            .foregroundStyle(.secondary)
-        }
-        .padding(12)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14))
-        .frame(maxWidth: 520)
     }
 }
 

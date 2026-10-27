@@ -21,20 +21,16 @@ pops up.
 
 ## Playing it in the simulator
 
-The iPhone Duo simulator only offers three hinge positions (closed, 128.6° and
-fully open), so in the simulator a **Fake fold** slider drives the game instead,
-from 0° (shut) to 180° (flat).
+In Xcode's Device Hub, hold **Option** to get the iPhone Duo simulator's hinge
+slider, then drag it to fold the phone to any angle.
 
-- Slide slowly until the path lines up and the hint says *Hold still*.
+- Fold slowly until the path lines up and the hint says *Hold still*.
 - Hold for half a second until it clicks (on a phone you'll feel a tap).
 - Tap the scene to walk.
-- Slide below about 10° to shut the book and see the cover. Open it again to
-  watch the room pop up.
 
-On a real iPhone Duo the hinge drives it. A **Hinge / Fake fold** button in the
-top corner switches between the two. Tap the angle in the top-left corner for
-the full readout: raw and smoothed angle, hinge status, updates per second and a
-graph of the last few seconds.
+Tap the angle in the top-left corner for the full readout: raw and smoothed
+angle, hinge status, updates per second and a graph of the last few seconds.
+On a phone without a hinge, the angle stays at 120°.
 
 ## Running it
 
@@ -62,20 +58,38 @@ has:
 
 `RenderQuality` in `PopUp/Materials.swift` sets all of this. Change
 `RenderQuality.current` to `.rich` to try the heavier look on a real iPhone Duo.
-`LevelScene.exposure` sets the overall brightness.
 
-## Folding and the pop-up
+Two knobs in `PopUp/LevelScene.swift` set the overall look:
+
+- `exposure`, in stops: +1 doubles the brightness, -1 halves it.
+- `saturation`: 1 is unchanged, lower is more muted.
+
+## Folding and the system animation
 
 When iPhone Duo moves an app between its outer and inner screens, iOS plays its
-own transition, and as far as Apple's documentation shows, apps can't turn it
-off. Apple treats a fold as a layout change. So the game doesn't fight it:
+own transition: it holds a snapshot of the screen, frosts it over and slides it
+across.
 
-- Nothing in the game's layout moves when you fold, so there's no extra fade.
-- With the book shut, the cover shows.
-- As it opens, the walls swing up like paper flaps and everything else springs
-  up off the page. The angle drives it, so it follows your hand.
-- Going to the next room folds this one flat and pops the next one up. Nothing
-  fades to black.
+I couldn't find any way for an app to turn that off. I looked through Apple's
+iPhone Duo developer guide, design guidelines, tech talks and developer-forum
+Q&A for an API or Info.plist key, and there isn't one. Apple's guidance is that
+a fold reaches the app as a resize and trait change.
+
+What the game does about it:
+
+- **It adds no animation of its own.** `StillHostingController` (in
+  `PopUpApp.swift`) applies fold, unfold and rotate resizes instantly. UIKit
+  would otherwise animate them, which smears the 3D view.
+- **It never needs the phone shut.** All the puzzles happen between 60° and
+  180°, so play stays on the inner screen.
+- **The book still behaves like a pop-up.** With the book shut, the cover
+  shows. As it opens, the room springs up off the page, driven by the angle.
+  Changing rooms folds one down and pops the next one up.
+
+It may be worth trying **Settings > Accessibility > Motion > Reduce Motion**,
+in the simulator or on the phone. Across iOS it swaps many zoom and slide
+transitions for a plain dissolve. Whether it changes the iPhone Duo fold isn't
+documented.
 
 ## How it's built
 
@@ -84,7 +98,7 @@ off. Apple treats a fold as a layout change. So the game doesn't fight it:
 | `PopUpCore/` | The game's logic, with no UIKit in it, so it runs and tests anywhere. |
 | `PopUpCore/.../Levels.swift` | Each room as a **blueprint**: every piece, light, particle emitter and walking route. |
 | `PopUpCore/.../CameraMapping.swift` | The hinge-to-camera tilt, and the perspective camera maths. |
-| `PopUp/HingeAngleSource.swift` | **The only file that reads the hinge** (`UIHingeInteraction`), plus the fake fold. |
+| `PopUp/HingeAngleSource.swift` | **The only file that reads the hinge** (`UIHingeInteraction`). |
 | `PopUp/GameController.swift` | The frame loop: smoothing, the hold-to-click lock, the pop-up spring, walking, rooms. |
 | `PopUp/LevelScene.swift` | Builds a blueprint into a SceneKit scene, with fog, bloom, lights and the pop-up layers. |
 | `PopUp/Traveller.swift` | The traveller in the yellow raincoat and his walk. |
@@ -115,15 +129,17 @@ angle from that band.
 | Smoothing | `AngleSmoother` | 0.15 s glide, ignores changes under 0.3° |
 | Hinge to camera tilt | `CameraMapping` | 60° = side view, 180° = straight down |
 | When the room pops up | `GameController.foldedBelow`, `poppedAbove` | flat below 15°, standing above 50° |
+| Brightness and colour | `LevelScene.exposure`, `saturation` | -0.3 stops, 0.85 |
 
 ## Not verified yet
 
-- **The new iOS code hasn't been compiled.** It was written in a Linux container
-  with no Xcode, so it only got a Swift syntax check. Expect a first build to
-  need small fixes.
+- **The latest iOS changes haven't been compiled.** The 3D version built and ran
+  in the simulator. The newest changes (the still hosting controller, removing
+  the fake fold, the toned-down lighting) were written without Xcode and only
+  got a Swift syntax check.
 - **What does work:** `PopUpCore` builds and its 25 tests pass, run with Swift
   6.1 on Linux.
-- **Layout was only checked in Blender.** The rooms were rendered from the same
-  blueprints in Blender to check framing, lighting and the illusions. SceneKit's
-  lighting differs, so brightness may need tuning with `LevelScene.exposure`.
+- **Brightness is a guess.** It was turned down after the first simulator run
+  came out very bright and oversaturated, but it hasn't been seen since. Tune
+  it with `LevelScene.exposure` and `saturation`.
 - **No real hinge yet.** The fold's feel hasn't been tried on a real iPhone Duo.

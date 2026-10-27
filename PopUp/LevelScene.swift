@@ -9,8 +9,10 @@ import UIKit
 /// everything this needs built in (fog, bloom, particles, shadows).
 @MainActor
 final class LevelScene {
-    /// Brightness of the whole picture. Raise it if the rooms look too dark.
-    static let exposure: CGFloat = 0.3
+    /// Brightness of the whole picture, in stops: +1 doubles it, -1 halves it.
+    static let exposure: CGFloat = -0.3
+    /// Colour strength: 1 is unchanged, lower is more muted.
+    static let saturation: CGFloat = 0.85
 
     let blueprint: Blueprint
     let scene = SCNScene()
@@ -108,13 +110,14 @@ final class LevelScene {
         camera.wantsHDR = true
         camera.wantsExposureAdaptation = false
         camera.exposureOffset = Self.exposure
-        camera.bloomIntensity = 0.8
-        camera.bloomThreshold = 0.9
-        camera.bloomBlurRadius = 8
+        // A soft glow around flames and lanterns only, not the whole room.
+        camera.bloomIntensity = 0.35
+        camera.bloomThreshold = 1.1
+        camera.bloomBlurRadius = 6
         camera.vignettingIntensity = 0.7
         camera.vignettingPower = 0.9
-        camera.saturation = 1.08
-        camera.contrast = 0.12
+        camera.saturation = Self.saturation
+        camera.contrast = 0.06
         if quality.ambientOcclusion {
             camera.screenSpaceAmbientOcclusionIntensity = 0.9
             camera.screenSpaceAmbientOcclusionRadius = 0.35

@@ -17,7 +17,7 @@ struct AngleReadout: View {
                     Text("\(game.hinge.degrees, specifier: "%.1f")°")
                         .font(.system(.title3, design: .rounded).weight(.bold))
                         .monospacedDigit()
-                    Text(game.hinge.isUsingFakeFold ? "fake fold" : "hinge")
+                    Text(game.hinge.hasHinge ? "hinge" : "no hinge")
                         .font(.caption2.weight(.semibold))
                         .foregroundStyle(.secondary)
                     Image(systemName: expanded ? "chevron.up" : "chevron.down")
@@ -39,7 +39,7 @@ struct AngleReadout: View {
         VStack(alignment: .leading, spacing: 3) {
             Text("smoothed \(game.smoothedDegrees, specifier: "%.1f")° · camera tilt \(game.cameraTilt, specifier: "%.1f")°")
             if game.hinge.hasHinge {
-                Text("hinge \(game.hinge.hingeDegrees, specifier: "%.1f")° \(game.hinge.statusName) · \(game.updatesPerSecond) updates/s")
+                Text("\(game.hinge.statusName) · \(game.updatesPerSecond) updates/s")
             } else {
                 Text("no hinge reported")
             }
