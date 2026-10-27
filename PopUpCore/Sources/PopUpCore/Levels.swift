@@ -93,8 +93,8 @@ public enum Levels {
         b.mushrooms(at: near([5.0, 0, pathZ + 0.55]), count: 4, spread: 0.25)
         b.door(at: near([doorX, 0, pathZ - 0.75]), scale: s)
 
-        b.light(.directional, color: [0.55, 0.66, 1.0], intensity: 520, at: [-8, 12, 10], target: [0, 0, 0])
-        b.light(.directional, color: [0.45, 0.55, 0.85], intensity: 260, at: [3, 6, -10], target: [0, 1, 0])
+        b.light(.directional, color: [0.55, 0.66, 1.0], intensity: 280, at: [-8, 12, 10], target: [0, 0, 0])
+        b.light(.directional, color: [0.45, 0.55, 0.85], intensity: 140, at: [3, 6, -10], target: [0, 1, 0])
         b.emit(.fireflies, at: [2.2, 0.2, -0.8], extent: [4, 2.5, 3.5])
         b.emit(.leaves, at: [0, 7.5, -1], extent: [16, 0.5, 9])
         b.forest(below: 0)
@@ -105,7 +105,7 @@ public enum Levels {
             intro: "Open the book slowly until the floor reaches the door",
             rig: rig,
             lock: LockSettings(target: alignHinge, tolerance: 4, releaseTolerance: 8),
-            atmosphere: Atmosphere(fogColor: [0.07, 0.10, 0.13], fogStart: 26, fogEnd: 60, skyLight: 0.8),
+            atmosphere: Atmosphere(fogColor: [0.07, 0.10, 0.13], fogStart: 26, fogEnd: 60, skyLight: 0.35),
             pieces: b.pieces, lights: b.lights, emitters: b.emitters,
             backdropHinge: [0, 0, -2.78],
             start: [-2.85, rugTop, pathZ],
@@ -193,7 +193,7 @@ public enum Levels {
             b.cylinder(radius: 0.09, height: 0.22, at: [-1.4 + dx, 2.75, -2.36], .jarGlow)
             b.cylinder(radius: 0.06, height: 0.04, at: [-1.4 + dx, 2.88, -2.36], i == 1 ? .iron : .wood)
         }
-        b.light(.omni, color: [0.85, 1.0, 0.45], intensity: 380, at: [-1.4, 2.9, -2.1], range: 3.2)
+        b.light(.omni, color: [0.85, 1.0, 0.45], intensity: 220, at: [-1.4, 2.9, -2.1], range: 3.2)
         books(&b, at: [-3.9, 4.14, -2.36])
         b.hangingLantern(at: [-4.2, 2.5, -1.4], ceiling: 5.45, aimAt: [-3.4, 0, -0.9])
         b.mushrooms(at: [-3.5, 0, -0.1], count: 5)
@@ -207,8 +207,8 @@ public enum Levels {
                count: 4, size: 0.1...0.18)
         b.door(at: near([doorX, landingTop, pathZ - 0.85]), scale: s)
 
-        b.light(.directional, color: [0.55, 0.66, 1.0], intensity: 520, at: [-9, 12, 9], target: [0, 0, 0])
-        b.light(.directional, color: [0.5, 0.5, 0.8], intensity: 240, at: [-3, 6, -10], target: [0, 2, 0])
+        b.light(.directional, color: [0.55, 0.66, 1.0], intensity: 280, at: [-9, 12, 9], target: [0, 0, 0])
+        b.light(.directional, color: [0.5, 0.5, 0.8], intensity: 130, at: [-3, 6, -10], target: [0, 2, 0])
         b.emit(.fireflies, at: [-1.4, 3.2, -1.8], extent: [3, 1.5, 1.2])
         b.emit(.leaves, at: [0, 8.5, -1], extent: [15, 0.5, 8])
         b.forest(below: 0)
@@ -225,7 +225,7 @@ public enum Levels {
             intro: "Find the angle where the stairs join up",
             rig: rig,
             lock: LockSettings(target: alignHinge, tolerance: 4, releaseTolerance: 8),
-            atmosphere: Atmosphere(fogColor: [0.12, 0.09, 0.07], fogStart: 26, fogEnd: 62, skyLight: 0.75),
+            atmosphere: Atmosphere(fogColor: [0.12, 0.09, 0.07], fogStart: 26, fogEnd: 62, skyLight: 0.35),
             pieces: b.pieces, lights: b.lights, emitters: b.emitters,
             backdropHinge: [0, 0, -2.75],
             start: [-4.4, 0, pathZ],
@@ -303,8 +303,8 @@ public enum Levels {
         b.moss(from: [-4.6, 0, 1.6], to: [4.6, 0, 1.6], count: 9)
         b.door(at: [exitDoor.x, 0, -2.36], scale: 0.68)
 
-        b.light(.directional, color: [0.6, 0.66, 1.0], intensity: 520, at: [-7, 12, 10], target: [0, 0, 0])
-        b.light(.directional, color: [0.5, 0.5, 0.85], intensity: 240, at: [4, 6, -10], target: [0, 1, 0])
+        b.light(.directional, color: [0.6, 0.66, 1.0], intensity: 280, at: [-7, 12, 10], target: [0, 0, 0])
+        b.light(.directional, color: [0.5, 0.5, 0.85], intensity: 130, at: [4, 6, -10], target: [0, 1, 0])
         b.emit(.dust, at: [0, 2.2, -1.6], extent: [2, 1.6, 1.4])
         b.forest(below: 0)
 
@@ -313,7 +313,7 @@ public enum Levels {
             intro: "Find a view that shows both the hole and the way out",
             rig: rig,
             lock: LockSettings(target: 114, tolerance: 6, releaseTolerance: 9),
-            atmosphere: Atmosphere(fogColor: [0.08, 0.08, 0.12], fogStart: 26, fogEnd: 60, skyLight: 0.75),
+            atmosphere: Atmosphere(fogColor: [0.08, 0.08, 0.12], fogStart: 26, fogEnd: 60, skyLight: 0.35),
             pieces: b.pieces, lights: b.lights, emitters: b.emitters,
             backdropHinge: [0, 0, -2.45],
             start: [-3.8, 0, pathZ],

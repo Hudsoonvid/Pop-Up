@@ -5,6 +5,9 @@ import UIKit
 /// from simple shapes and animated in code. `node` sits at his feet.
 @MainActor
 final class Traveller {
+    /// How bright his lantern is (1000 is SceneKit's full strength).
+    static let lanternIntensity: CGFloat = 150
+
     let node = SCNNode()
 
     /// Hops when he can't go on. Kept apart from `body` so the walk doesn't fight it.
@@ -61,7 +64,7 @@ final class Traveller {
         lantern.addChildNode(shape(SCNCone(topRadius: 0.012, bottomRadius: 0.06, height: 0.05), boots, at: [0, 0.02, 0]))
         lanternLight.type = .omni
         lanternLight.color = UIColor(red: 1, green: 0.7, blue: 0.42, alpha: 1)
-        lanternLight.intensity = 260
+        lanternLight.intensity = Self.lanternIntensity
         lanternLight.attenuationStartDistance = 0
         lanternLight.attenuationEndDistance = 2.6
         lanternLight.attenuationFalloffExponent = 2
@@ -109,7 +112,7 @@ final class Traveller {
 
     /// A light that follows him around, dimmed with the room as the book folds.
     func setLanternBrightness(_ amount: Double) {
-        lanternLight.intensity = 260 * CGFloat(amount)
+        lanternLight.intensity = Self.lanternIntensity * CGFloat(amount)
     }
 
     /// He reaches the gap and can't go on: a little hop.
@@ -163,14 +166,14 @@ final class Traveller {
     private func glow() -> SCNMaterial {
         let m = material(red: 0.3, green: 0.28, blue: 0.24, roughness: 0.5)
         m.emission.contents = UIColor(red: 1, green: 0.9, blue: 0.7, alpha: 1)
-        m.emission.intensity = 3
+        m.emission.intensity = 1.4
         return m
     }
 
     private func glowWarm() -> SCNMaterial {
         let m = material(red: 0.3, green: 0.2, blue: 0.1, roughness: 0.4)
         m.emission.contents = UIColor(red: 1, green: 0.62, blue: 0.3, alpha: 1)
-        m.emission.intensity = 3
+        m.emission.intensity = 1.4
         return m
     }
 }

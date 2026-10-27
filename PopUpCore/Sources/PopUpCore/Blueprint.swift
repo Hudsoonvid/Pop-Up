@@ -313,7 +313,7 @@ struct RoomBuilder {
             sphere(radius: r, at: p + [0, h, 0], .mushroomGlow, scale: [1, 0.55, 1])
         }
         if lit {
-            light(.omni, color: [0.35, 0.95, 0.85], intensity: 260, at: base + [0, 0.35, 0], range: 2.4)
+            light(.omni, color: [0.35, 0.95, 0.85], intensity: 150, at: base + [0, 0.35, 0], range: 2.4)
         }
         emit(.spores, at: base + [0, 0.35, 0], extent: [spread * 2, 0.3, spread * 2])
     }
@@ -323,7 +323,7 @@ struct RoomBuilder {
         cylinder(radius: 0.055, height: height, at: base + [0, height / 2, 0], .wax)
         sphere(radius: 0.032, at: base + [0, height + 0.05, 0], .flame, scale: [1, 1.7, 1])
         if lit {
-            light(.omni, color: [1.0, 0.62, 0.3], intensity: 420, at: base + [0, height + 0.12, 0],
+            light(.omni, color: [1.0, 0.62, 0.3], intensity: 250, at: base + [0, height + 0.12, 0],
                   range: 3.2, flickers: true)
         }
     }
@@ -336,7 +336,7 @@ struct RoomBuilder {
         cone(top: 0.03, bottom: 0.15, height: 0.1, at: position + [0, 0.15, 0], .iron)
         box([0.2, 0.24, 0.2], at: position, .lanternGlass, chamfer: 0.02)
         box([0.24, 0.03, 0.24], at: position - [0, 0.13, 0], .iron)
-        light(.spot, color: [1.0, 0.66, 0.36], intensity: 2800, at: position - [0, 0.1, 0], target: target,
+        light(.spot, color: [1.0, 0.66, 0.36], intensity: 1200, at: position - [0, 0.1, 0], target: target,
               range: 11, spotAngle: 120, shadow: true, flickers: true)
         emit(.dust, at: (position + target) / 2, extent: [2.6, max(position.y - target.y, 1), 2.2])
     }
@@ -349,7 +349,7 @@ struct RoomBuilder {
         box([0.15, 0.2, 0.15], at: lantern, .lanternGlass, chamfer: 0.015)
         cone(top: 0.02, bottom: 0.11, height: 0.07, at: lantern + [0, 0.13, 0], .iron)
         moss(from: base + [-0.1, 0, 0], to: base + [0.1, 0, 0], count: 2, size: 0.1...0.16)
-        light(.omni, color: [1.0, 0.68, 0.38], intensity: 700, at: lantern + [0, 0, 0.2], range: 4.5, flickers: true)
+        light(.omni, color: [1.0, 0.68, 0.38], intensity: 420, at: lantern + [0, 0, 0.2], range: 4.5, flickers: true)
     }
 
     /// A round window with a wooden frame, glowing with moonlight.
@@ -378,7 +378,7 @@ struct RoomBuilder {
         box([0.13, 0.17, 0.13] * s, at: lantern, .lanternGlass, chamfer: 0.015 * s)
         cone(top: 0.02 * s, bottom: 0.1 * s, height: 0.07 * s, at: lantern + [0, 0.12 * s, 0], .iron)
         box([0.04, 0.04, 0.16] * s, at: lantern + [0, 0.17 * s, -0.08 * s], .iron)
-        light(.omni, color: [1.0, 0.7, 0.4], intensity: 900, at: lantern + [0, 0, 0.25 * s], range: 4.5, flickers: true)
+        light(.omni, color: [1.0, 0.7, 0.4], intensity: 480, at: lantern + [0, 0, 0.25 * s], range: 4.5, flickers: true)
     }
 
     /// The forest far below and the trunks of the great tree, lost in fog.
